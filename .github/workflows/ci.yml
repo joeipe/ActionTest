@@ -24,3 +24,8 @@ jobs:
       - name: dotnet publish
         working-directory: src
         run: dotnet publish ActionTest.API/ActionTest.API.csproj --configuration Release -o ../artifacts
+
+      - uses: actions/upload-artifact@v4
+        with:
+            name: actiontest-artifact
+            path: artifacts/
