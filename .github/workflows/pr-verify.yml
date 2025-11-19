@@ -19,3 +19,6 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build ./src/ActionTest.API/ActionTest.API.csproj --configuration Release
+
+      - name: dotnet test
+        run: dotnet test ./src/ActionTest.UnitTests/ActionTest.UnitTests.csproj --configuration Release --no-build
