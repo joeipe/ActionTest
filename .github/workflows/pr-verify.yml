@@ -24,3 +24,7 @@ jobs:
       - name: dotnet test
         working-directory: src
         run: dotnet test --configuration Release --no-build
+
+      - name: dotnet format
+        working-directory: src
+        run: dotnet format -v detailed --verify-no-changes
