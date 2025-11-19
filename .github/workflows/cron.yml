@@ -1,16 +1,16 @@
-name: Run every 5 minute
+# name: Run every 5 minute
 
-on:
-  schedule:
-    - cron: "*/5 * * * *"
+# on:
+#   schedule:
+#     - cron: "*/5 * * * *"
 
-jobs:
-  cron:
-    name: Run every 5 minute
-    runs-on: ubuntu-latest
+# jobs:
+#   cron:
+#     name: Run every 5 minute
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+#     steps:
+#       - uses: actions/checkout@v4
 
-      - name: Hello world
-        run: echo "Hello, world!"
+#       - name: Hello world
+#         run: echo "Hello, world!"
