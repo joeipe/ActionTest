@@ -12,7 +12,7 @@ namespace ActionTest.UnitTests.Services
 
         public ContactServiceShould()
         {
-            var inMemorySettings = new Dictionary<string, string> 
+            var inMemorySettings = new Dictionary<string, string>
             {
                 {"EnvironmentName", "Tst"}
             };
