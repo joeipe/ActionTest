@@ -12,7 +12,7 @@ namespace ActionTest.UnitTests.Services
 
         public ContactServiceShould()
         {
-            var inMemorySettings = new Dictionary<string, string> 
+            var inMemorySettings = new Dictionary<string, string>
             {
                 {"EnvironmentName", "Tst"}
             };
@@ -38,6 +38,7 @@ namespace ActionTest.UnitTests.Services
         }
 
         //[Fact]
+        [Fact]
         public async void GetEnvironmentSuccessfully()
         {
             //Arrange
