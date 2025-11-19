@@ -29,3 +29,21 @@ jobs:
         with:
             name: actiontest-artifact
             path: artifacts/
+
+  deploy_dev:
+    name: Deploy Dev
+    runs-on: ubuntu-latest
+    needs: build
+    # if: github.ref == 'refs/heads/master'
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: actiontest-artifact
+          path: artifacts/
+
+      - name: 'Deploy to Azure App Services'
+        uses: azure/webapps-deploy@v2
+        with: 
+          app-name: app-action-test-dev
+          package: artifacts/
