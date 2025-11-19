@@ -48,7 +48,7 @@ namespace ActionTest.UnitTests.Services
             var result = await sut.GetEnvironmentAsync();
 
             //Assert
-                    result.Should().BeSameAs(data);
+            result.Should().BeSameAs(data);
         }
     }
 }
