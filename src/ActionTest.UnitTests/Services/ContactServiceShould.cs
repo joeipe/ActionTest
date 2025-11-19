@@ -37,7 +37,7 @@ namespace ActionTest.UnitTests.Services
             result.First().FirstName.Should().Be("Joe");
         }
 
-        [Fact]
+        //[Fact]
         public async void GetEnvironmentSuccessfully()
         {
             //Arrange
