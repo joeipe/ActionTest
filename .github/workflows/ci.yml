@@ -48,6 +48,7 @@ jobs:
     uses: ./.github/workflows/step-deploy.yml
     with:
       env: prod
+    secrets: inherit
 #
 #   deploy_dev:
 #     name: Deploy Dev
