@@ -41,7 +41,8 @@ jobs:
     # uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
     with:
       env: dev
-      app-name: app-action-test
+      app_service_name: app-action-test-dev
+      resource_group_name: rg-action-test-dev
     secrets: inherit
 
   deploy_prod:
@@ -51,7 +52,8 @@ jobs:
     # uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
     with:
       env: prod
-      app-name: app-action-test
+      app_service_name: app-action-test-prod
+      resource_group_name: rg-action-test-prod
     secrets: inherit
 #
 #   deploy_dev:
