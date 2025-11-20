@@ -6,6 +6,9 @@ on:
       env:
         required: true
         type: string
+      app-name:
+        required: false
+        type: string
     secrets:
       AZURE_CLIENT_ID:
         required: true
@@ -37,5 +40,5 @@ jobs:
       - name: "Deploy to Azure App Services"
         uses: azure/webapps-deploy@v2
         with:
-          app-name: app-action-test-${{ inputs.env }}
+          app-name: ${{ inputs.app-name }}-${{ inputs.env }}
           package: artifacts/

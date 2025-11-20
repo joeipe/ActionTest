@@ -37,19 +37,21 @@ jobs:
   deploy_dev:
     name: Deploy Dev
     needs: build
-    # uses: ./.github/workflows/step-deploy.yml
-    uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
+    uses: ./.github/workflows/step-deploy.yml
+    # uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
     with:
       env: dev
+      app-name: app-action-test
     secrets: inherit
 
   deploy_prod:
     name: Deploy Prod
     needs: deploy_dev
-    # uses: ./.github/workflows/step-deploy.yml
-    uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
+    uses: ./.github/workflows/step-deploy.yml
+    # uses: joeipe/github-actions-templates/.github/workflows/step-deploy.yml@master
     with:
       env: prod
+      app-name: app-action-test
     secrets: inherit
 #
 #   deploy_dev:
